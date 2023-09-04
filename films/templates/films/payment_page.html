@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment Page - {{ film.title }}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Play', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #100028;
+        }
+
+        .content {
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        form {
+            width: 100%;
+            /* max-width: 400px; */
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #7a5700;
+            border-radius: 5px;
+            /* box-shadow: 4 8px 4px #7a5700; */
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button {
+            display: inline-block;
+            background-color: #7a5700;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1 style="color: #7a5700;">Please Fill The Form Below To Buy {{ film.title }}</h1>
+        <form method="post">
+            {% csrf_token %}
+            <input type="hidden" name="film_id" value="{{ film.id }}">
+            <label for="email">Email:</label>
+            <input type="email" name="email" required placeholder="Enter your email"><br>
+            <label for="phone_number">Phone Number:</label>
+            <input type="text" name="phone_number" required placeholder="Enter your MPESA phone number"><br>
+            <label for="amount">Amount:</label>
+            <input type="number" name="amount" step="0.01" required placeholder="Enter {{ film.price }}"><br>
+            <button type="submit">Pay Now</button>
+            <p>Check Your Phone And Confirm By Entering Your MPESA Pin</p>
+            <a href="{% url 'films:film_detail' %}">Go Back</a>
+
+        </form>
+    </div>
+</body>
+</html>

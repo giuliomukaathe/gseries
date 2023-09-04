@@ -1,0 +1,86 @@
+<!-- booking_email_template.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title style="color: #8d6300;">Congratulations!</title>
+    
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        
+        body {
+            font-family: "Play", sans-serif !important;
+            background-color: #0a1520;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #917a04;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .button a {
+            color: #fff;
+          
+        }
+        .footer {
+            margin-top: 30px;
+            padding-top: 10px;
+            border-top: 1px solid #645200;
+            text-align: center;
+        }
+        .social-icons {
+            margin-top: 10px;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            color: #007BFF;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <h1>{{ purchase.title }} Streaming Link</h1>
+        <p>Congratulations {{ purchase.email }} </p>
+        
+        <p>Thank you for purchasing the film "{{ purchase.title }}".</p>
+    <p>You can now stream the film by clicking the button below:</p>
+    <a href="{{ film_link }}" style="background-color: #6d5e00; color: #fff; padding: 10px 20px; text-decoration: none;">Watch Film</a>
+    <p>You can also stream by copy pasting the link below on your browser incase you experienced downfalls with the button above</p>
+    <a href="{{ film_link }}"></a>
+ 
+        
+        <p>Experiencing Any Troubles?:</p>
+        <a href="tel:+254715451366" class="button">Call US</a>
+        <a href="https://wa.link/29gxao" class="button">WhatsApp Us</a>
+
+        <p>Best regards,<br>
+            Team GSeries Media</p>
+        
+        <div class="footer">
+            <p>Visit our website: <a href="https://www.gseriesmediakenya.com">GSeries Media Kenya</a></p>
+            <div class="social-icons">
+                <p>Follow Us:</p>
+                <a href="https://www.facebook.com/example" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com/example" target="_blank">Instagram</a>
+                <a href="https://www.twitter.com/example" target="_blank">Twitter</a>
+                <a href="https://www.instagram.com/example" target="_blank">TikTok</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!-- booking_email_template.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title style="color: #8d6300;">New Booking Received</title>
+    <style>
+        body {
+            font-family: "Play", sans-serif;
+            background-color: #0a1520;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #917a04;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .button a {
+            color: #fff;
+          
+        }
+        .footer {
+            margin-top: 30px;
+            padding-top: 10px;
+            border-top: 1px solid #645200;
+            text-align: center;
+        }
+        .social-icons {
+            margin-top: 10px;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>New Booking Received</h1>
+        <p>Dear {{ name }},</p>
+        <p>Thank you for your booking with us. We have received the following details:</p>
+        
+        <ul>
+            <li>Name: {{ name }}</li>
+            <li>Email: {{ email }}</li>
+            <li>Phone Number: {{ phone_number }}</li>
+            <li>Package: {{ package }}</li>
+            <!-- Add more details if needed -->
+        </ul>
+        
+        <p>♾ Our commitment to exceptional service includes a swift response to your inquiry. Anticipate our prompt contact, as we're eager to engage in a comprehensive discussion regarding your unique needs. Every detail is of utmost importance, and we're dedicated to ensuring that no aspect is overlooked. </p>
+        <p>♾ Our team's expertise is poised to address your requirements thoroughly, ensuring that our forthcoming conversation is productive and tailored to your preferences. Trust us to guide you through the process, making certain that every detail aligns with your vision. Your satisfaction is our priority, and we're excited to embark on this collaborative journey with you. </p>
+
+        
+        
+        <p>For any urgent inquiries, you can reach us via:</p>
+        <a href="tel:+254715451366" class="button">Call</a>
+        <a href="https://wa.link/29gxao" class="button">WhatsApp</a>
+
+        <p>Best regards,<br>
+            Team GSeries Media</p>
+        
+        <div class="footer">
+            <p>Visit our website: <a href="https://www.gseriesmediakenya.com">GSeries Media Kenya</a></p>
+            <div class="social-icons">
+                <p>Follow Us:</p>
+                <a href="https://www.facebook.com/example" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com/example" target="_blank">Instagram</a>
+                <a href="https://www.twitter.com/example" target="_blank">Twitter</a>
+                <a href="https://www.instagram.com/example" target="_blank">TikTok</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
